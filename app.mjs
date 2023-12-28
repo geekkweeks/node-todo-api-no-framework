@@ -8,6 +8,10 @@ const server = http.createServer((req, res) => {
   if (req.method === "GET") {
     service.getProducts(req, res);
   }
+
+  if (req.method === "POST") {
+    service.createProduct(req, res);
+  }
 });
 
 server.listen(3000);

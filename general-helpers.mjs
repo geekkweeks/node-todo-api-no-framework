@@ -7,10 +7,16 @@ export class GeneralHelpers {
   getProducts() {
     try {
       const data = fs.readFileSync(proudctFilePath);
-      res = JSON.parse(data.toString());
+      const jsonData = JSON.parse(data.toString());
+      res = jsonData;
     } catch (err) {
       console.error(err);
     }
     return res;
+  }
+
+  writeJsonToFile(filePath, jsonData) {
+    // write new content
+    fs.writeFileSync(filePath, jsonData);
   }
 }
