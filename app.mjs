@@ -12,6 +12,10 @@ const server = http.createServer((req, res) => {
   if (req.method === "POST") {
     service.createProduct(req, res);
   }
+
+  if (req.method === "DELETE") {
+    service.deleteProduct(req, res);
+  }
 });
 
 server.listen(3000);

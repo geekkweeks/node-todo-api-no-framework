@@ -13,9 +13,7 @@ export class ProductServices {
   createProduct(request, response) {
     request.addListener("data", (data) => {
       const currentData = helpers.getProducts();
-      let sortData = currentData.sort((a, b) => {
-        return b.id - a.id;
-      });
+      let sortData = helpers.sortData(currentData, "desc");
       const newId = sortData[0].id;
       const body = JSON.parse(data.toString());
       body.id = newId + 1;
@@ -29,6 +27,24 @@ export class ProductServices {
       response.write(res);
       response.end();
     });
+  }
+
+  deleteProduct(request, response) {
+    const url = new URL(request.url, `http://${request.headers.host}`);
+    const productId = url.searchParams.get("productId");
+    if (productId) {
+      const products = helpers.getProducts();
+      const customProducts = products.filter((item) => {
+        return item.id !== parseInt(productId);
+      });
+      // rewrite JSON file
+      helpers.writeJsonToFile("products.json", JSON.stringify(customProducts));
+    }
+    const res = ProductServices.#responseGenerator(200, null);
+    response.write(res);
+    response.end();
+
+    // console.log(request);
   }
 
   static #responseGenerator(code, data) {

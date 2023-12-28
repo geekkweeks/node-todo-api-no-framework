@@ -19,4 +19,20 @@ export class GeneralHelpers {
     // write new content
     fs.writeFileSync(filePath, jsonData);
   }
+
+  sortData(data, type) {
+    if (type === "desc") {
+      return data.sort((a, b) => {
+        return b.id - a.id;
+      });
+    }
+
+    if (type === "asc") {
+      return data.sort((a, b) => {
+        return a.id - b.id;
+      });
+    }
+
+    return data;
+  }
 }

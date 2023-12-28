@@ -1,38 +1,5 @@
 [
 	{
-		"title": "Monitor XIAOMI 32 INC",
-		"description": "XIAOMI",
-		"price": 549,
-		"discountPercentage": 12.96,
-		"rating": 4.69,
-		"stock": 3,
-		"brand": "XIAOMI INDONESIA",
-		"category": "monitor",
-		"thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-		"images": [
-
-		],
-		"id": 31
-	},
-	{
-		"id": 30,
-		"title": "Key Holder",
-		"description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-		"price": 30,
-		"discountPercentage": 2.92,
-		"rating": 4.92,
-		"stock": 54,
-		"brand": "Golden",
-		"category": "home-decoration",
-		"thumbnail": "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
-		"images": [
-			"https://i.dummyjson.com/data/products/30/1.jpg",
-			"https://i.dummyjson.com/data/products/30/2.jpg",
-			"https://i.dummyjson.com/data/products/30/3.jpg",
-			"https://i.dummyjson.com/data/products/30/thumbnail.jpg"
-		]
-	},
-	{
 		"id": 29,
 		"title": "Handcraft Chinese style",
 		"description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
